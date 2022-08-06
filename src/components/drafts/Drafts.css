@@ -1,0 +1,45 @@
+/* button  border gradient with border radius */
+.button-border {
+  position: relative;
+  padding: 10px !important;
+}
+.button-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  padding: 2px;
+  background: linear-gradient(
+      0deg,
+      rgba(217, 217, 217, 0),
+      rgba(217, 217, 217, 0)
+    ),
+    linear-gradient(180deg, #fcff00 0%, #3fff13 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.countdowntimer-box {
+  position: relative;
+  padding-block: 15px !important;
+}
+.countdowntimer-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.gradient-color {
+  background: linear-gradient(179.93deg, #FCFF00 50%, #3FFF13 104.11%) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+
+
+

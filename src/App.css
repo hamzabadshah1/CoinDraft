@@ -1,0 +1,24 @@
+/* button text gradient */
+#button-text {
+    background: -webkit-linear-gradient(90deg, #FCFF01 0%, #41FF13 100%) !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* button  border gradient with border radius */
+.button-border {
+  position: relative;
+  padding: 10px !important;
+}
+.button-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(90deg, #FCFF01 0%, #41FF13 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
