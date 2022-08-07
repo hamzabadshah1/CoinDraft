@@ -19,7 +19,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-
+/* countdown boxes */
 .countdowntimer-box {
   position: relative;
   padding-block: 15px !important;
@@ -34,12 +34,18 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+/* headings gradient color */
 .gradient-color {
   background: linear-gradient(179.93deg, #FCFF00 50%, #3FFF13 104.11%) !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
+.footer-text {
+  background: linear-gradient(180deg, #FCFF00 28.33%, #3FFF13 78.33%) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 
 
 

@@ -47,7 +47,7 @@ const Login = () => {
           spacing={{ base: "4", lg: "6" }}
           w={{ base: "80%", sm: "50%", lg: "35%" }}
         >
-          <Button _hover={{}} className="button-border" variant={"link"}>
+          <Button _hover={{}} className="button-border-colored" variant={"link"}>
             <Heading id="button-text" fontSize={"lg"} fontWeight="700">
               Login
             </Heading>
