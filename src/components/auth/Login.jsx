@@ -2,7 +2,9 @@ import { Button, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import "../../App.css";
+import {useNavigate} from 'react-router-dom'
 const Login = () => {
+  const nav = useNavigate()
   return (
     <Stack
       h={"100vh"}
@@ -47,7 +49,7 @@ const Login = () => {
           spacing={{ base: "4", lg: "6" }}
           w={{ base: "80%", sm: "50%", lg: "35%" }}
         >
-          <Button _hover={{}} className="button-border" variant={"link"}>
+          <Button onClick={()=>nav('/')} _hover={{}} className="button-border-colored" variant={"link"}>
             <Heading id="button-text" fontSize={"lg"} fontWeight="700">
               Login
             </Heading>
