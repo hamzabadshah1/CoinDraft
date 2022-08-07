@@ -2,11 +2,14 @@ import { Button, Center, Heading, HStack, Image, Stack, Tag, Text, VStack, chakr
 import React from 'react'
 import '../../App.css'
 import logo from '../../assets/images/logo.png'
+import { useNavigate } from 'react-router-dom';
+
 
 const ContestLobby = () => {
+    const nav = useNavigate()
     return (
         <>
-            <Stack bg={"#050826"} minH={"100vh"} px={{ base: '2', sm: '12' }} py={'10'} spacing={'6'} justify={{ base: 'center' }} align={'center'}>
+            <Stack bg={"#050826"} minH={"100vh"} px={{ base: '2', sm: '12' }} py={{ base: '4', md: '10' }} spacing={{ base: '6', md: '12' }} justify={{ base: 'space-between', md: 'center' }} align={'center'}>
                 {/* Heading Container */}
                 <Stack direction={{ base: 'row', md: 'column' }} w={"full"} align={{ base: 'center' }} justify={{ base: 'space-between', md: 'inherit' }}>
                     <Heading fontSize={{ base: '3xl', sm: '5xl', md: '5xl' }} bgGradient='linear(180deg, #FCFF00 40%, #3FFF13 100%)' bgClip='text'>1v1 Lobby</Heading>
@@ -53,68 +56,46 @@ const ContestLobby = () => {
                         </VStack>
                     </Stack>
 
+
                     {/* Table Container */}
-                    <Stack mx={{ base: '0 !important', md: '4 !important' }} flex={'1'}>
-                        <Button className='button-border' _hover={{}} _focus={{}} _active={{}} bgColor={'#25294A'} color={'white'}>Create a 1v1 contest</Button>
-                        <Stack className='example' direction={'row'} spacing={'4'} overflow={'auto'}>
-
-                            <Stack direction={'row'} color={'#96A9DE'} p={'4'} bgColor={'#25294A'} borderRadius={'lg'} w={'50%'}>
-                                <Stack w={'50%'}>
-                                    <Text>Contest Id: #123456789</Text>
-                                    <Stack fontWeight={'bold'}>
-                                        <Text color={'white'}><chakra.span id='button-text' >Mode:</chakra.span>1v1 </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Players:</chakra.span>1/2 </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Buy-In fee:</chakra.span>N/A </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Buy-In Currency:</chakra.span>N/A </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Game Duration:</chakra.span>12Hours </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Payout Scale:</chakra.span>N/A</Text>
+                    <Stack mx={{ base: '0 !important', md: '4 !important' }} flex={'1'} justify={'end'}>
+                        <Button className='button-border' onClick={() => nav('/createcontest')} _hover={{}} _focus={{}} _active={{}} bgColor={'#25294A'} color={'white'}>Create a 1v1 contest</Button>
+                        <Stack className='example' direction={{ base: 'column', lg: 'row' }} spacing={'4'} overflow={'auto'} h={'full'} borderRadius={'lg'}>
+                            {/* Card Container */}
+                            <Stack direction={'row'} color={'#96A9DE'} p={'4'} bgColor={'#25294A'} borderRadius={'lg'} w={{ base: 'full', lg: '50%' }} justify={'space-between'}>
+                                {/* Left Side Content */}
+                                <Stack className='test' w={{ base: '50%', md: '50%' }} h={'full'}>
+                                    <Text fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}>Contest Id: #123456789</Text>
+                                    <Stack fontWeight={'bold'} spacing={'0'} justify={'end'}>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Mode:</chakra.span>1v1 </Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Players:</chakra.span>1/2 </Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Buy-In fee:</chakra.span>N/A </Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Buy-In Currency:</chakra.span>N/A </Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Game Duration:</chakra.span>12Hours </Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md', md: 'xl' }}><chakra.span id='button-text' >Payout Scale:</chakra.span>N/A</Text>
                                     </Stack>
                                 </Stack>
-
-                                <Stack w={'50%'}>
+                                {/* Right Side Content */}
+                                <Stack w={{ base: '40%', md: '50%' }} justify={{ base: 'start', md: 'space-between' }}>
                                     <Stack>
-                                        <Text color={'white'}>Players Registered</Text>
+                                        <Text color={'white'} fontSize={{ base: 'xs', sm: 'md' }}>Players Registered</Text>
                                         <Stack bgColor={'#050826'} h={'20'} borderRadius={'lg'} px={'2'} py={'1'} overflow={'auto'} className='example'>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>1. Asad</Text>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>2. Sufyan</Text>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>3. Huma</Text>
+                                            <Text id='button-text' fontWeight={'bold'} fontSize={{ base: 'xs', md: 'lg' }}>1. Asad</Text>
+                                            <Text id='button-text' fontWeight={'bold'} fontSize={{ base: 'xs', md: 'lg' }}>2. Sufyan</Text>
+                                            <Text id='button-text' fontWeight={'bold'} fontSize={{ base: 'xs', md: 'lg' }}>3. Huma</Text>
                                         </Stack>
                                     </Stack>
+                                    <Button _hover={{}} _focus={{}} _active={{}} bgGradient='linear(180deg, #FCFF00 10%, #3FFF13 100%)' color={'black'} borderRadius={'full'} size={{ base: 'sm', md: 'md' }}>Register</Button>
                                 </Stack>
                             </Stack>
-
-                            <Stack direction={'row'} color={'#96A9DE'} p={'4'} bgColor={'#25294A'} borderRadius={'lg'} w={'50%'}>
-                                <Stack w={'50%'}>
-                                    <Text>Contest Id: #123456789</Text>
-                                    <Stack fontWeight={'bold'}>
-                                        <Text color={'white'}><chakra.span id='button-text' >Mode:</chakra.span>1v1 </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Players:</chakra.span>1/2 </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Buy-In fee:</chakra.span>N/A </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Buy-In Currency:</chakra.span>N/A </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Game Duration:</chakra.span>12Hours </Text>
-                                        <Text color={'white'}><chakra.span id='button-text' >Payout Scale:</chakra.span>N/A</Text>
-                                    </Stack>
-                                </Stack>
-
-                                <Stack w={'50%'}>
-                                    <Stack>
-                                        <Text color={'white'}>Players Registered</Text>
-                                        <Stack bgColor={'#050826'} h={'20'} borderRadius={'lg'} px={'2'} py={'1'} overflow={'auto'} className='example'>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>1. Asad</Text>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>2. Sufyan</Text>
-                                            <Text id='button-text' fontWeight={'bold'} fontSize={'lg'}>3. Huma</Text>
-                                        </Stack>
-                                    </Stack>
-                                </Stack>
-                            </Stack>
-
                         </Stack >
                         {/* Additional Stack */}
                         <Stack Stack w={'36'} display={{ base: 'none', md: 'inherit' }} align={'center'} ></Stack >
                     </Stack >
-                    {/* Home Mibile Screen Button */}
-                    <Button Button w={'40vw'} display={{ base: 'inherit', md: 'none' }} bgGradient='linear(180deg, #FCFF00 10%, #3FFF13 100%)' > Home</Button >
+
                 </Stack >
+                {/* Home Mibile Screen Button */}
+                <Button _hover={{}} _focus={{}} _active={{}} w={'40vw'} display={{ base: 'inherit', md: 'none' }} bgGradient='linear(180deg, #FCFF00 10%, #3FFF13 100%)' > Home</Button >
             </Stack>
         </>
     )
