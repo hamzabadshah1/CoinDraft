@@ -6,6 +6,9 @@ import Home from '../../components/home/Home'
 import Menu from '../../components/menu/Menu'
 import TrendingCoins from '../../components/trendingCoins/TrendingCoins'
 import PrizePayouts from '../../components/prizePayouts/PrizePayouts'
+import FAQ from '../../components/faq/FAQ'
+import MyProfile from '../../components/my profile/MyProfile'
+
 const MainRoutes = () => {
   return (
     <Routes>
@@ -15,6 +18,8 @@ const MainRoutes = () => {
       <Route path='/prize-payouts' element={<PrizePayouts/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/drafts' element={<Drafts/>}/>
+      <Route path='/profile' element={<MyProfile/>}/>
+      <Route path='/faq' element={<FAQ/>}/>
 
     </Routes>
   )
