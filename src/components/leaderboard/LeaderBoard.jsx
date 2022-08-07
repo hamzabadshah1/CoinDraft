@@ -4,9 +4,11 @@ import logo from '../../assets/images/logo.png'
 import down from '../../assets/images/down.svg'
 import "../../App.css";
 import LeaderboardTable from './LeaderboardTable';
+import { useNavigate } from 'react-router-dom';
 
 
 const LeaderBoard = () => {
+    const nav = useNavigate()
     return (
         <>
             <Stack bg={"#050826"} minH={"100vh"} px={{ base: '2', sm: '12' }} py={'10'} spacing={'6'}>
@@ -28,7 +30,7 @@ const LeaderBoard = () => {
                                 Prizes
                             </Heading>
                         </Button>
-                        <Button w={'36'} _hover={{ textDecoration: 'none' }} className="button-border" variant={"link"}>
+                        <Button w={'36'} onClick={() => nav('/gameschedule')} _hover={{ textDecoration: 'none' }} className="button-border" variant={"link"}>
                             <Heading fontSize={"lg"} color={'white'} fontWeight="700">
                                 Game Schedule
                             </Heading>

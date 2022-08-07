@@ -1,8 +1,8 @@
 /* button text gradient */
 #button-text {
-    background: -webkit-linear-gradient(90deg, #FCFF01 0%, #41FF13 100%) !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+  background: -webkit-linear-gradient(90deg, #FCFF01 0%, #41FF13 100%) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* button  border gradient with border radius */
@@ -10,6 +10,7 @@
   position: relative;
   padding: 10px !important;
 }
+
 .button-border::before {
   content: "";
   position: absolute;
@@ -22,3 +23,6 @@
   mask-composite: exclude;
 }
 
+.example::-webkit-scrollbar {
+  display: none;
+}
