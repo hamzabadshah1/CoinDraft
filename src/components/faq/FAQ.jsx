@@ -83,7 +83,7 @@ const Learn = () => {
               </>
             )}
           </AccordionItem>
-          <AccordionItem border={'none'} mt="3 !important">
+          <AccordionItem border={'none'} >
             {({ isExpanded }) => (
               <>
                 <h2>
@@ -131,7 +131,7 @@ const Learn = () => {
               </>
             )}
           </AccordionItem>
-          <AccordionItem border={'none'} mt="3 !important">
+          <AccordionItem border={'none'} >
             {({ isExpanded }) => (
               <>
                 <h2>
@@ -177,7 +177,7 @@ const Learn = () => {
               </>
             )}
           </AccordionItem>
-          <AccordionItem border={'none'} mt="3 !important">
+          <AccordionItem border={'none'} >
             {({ isExpanded }) => (
               <>
                 <h2>
@@ -223,7 +223,7 @@ const Learn = () => {
               </>
             )}
           </AccordionItem>
-          <AccordionItem border={'none'} mt="3 !important">
+          <AccordionItem border={'none'} >
             {({ isExpanded }) => (
               <>
                 <h2>
@@ -269,7 +269,7 @@ const Learn = () => {
               </>
             )}
           </AccordionItem>
-          <AccordionItem border={'none'} mt="3 !important">
+          <AccordionItem border={'none'} >
             {({ isExpanded }) => (
               <>
                 <h2>
@@ -323,7 +323,7 @@ const Learn = () => {
         size={'md'}
         mt={'5 !important'}
         alignSelf={'center'}
-        w={'25%'}
+        w={{base:"50%",md:'30%',lg:'20%'}}
         bg={'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
         borderRadius="md"
       >

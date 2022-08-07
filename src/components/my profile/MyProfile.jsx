@@ -65,6 +65,7 @@ const MyProfile = () => {
               </Heading>
             </Button>
             <Button
+            onClick={() => nav('/drafts')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -78,6 +79,7 @@ const MyProfile = () => {
               </Heading>
             </Button>
             <Button
+            onClick={() => nav('/leaderboard')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -91,6 +93,7 @@ const MyProfile = () => {
               </Heading>
             </Button>
             <Button
+            onClick={() => nav('/prize-payouts')}
               className="button-border"
               color={'white'}
               _hover={{

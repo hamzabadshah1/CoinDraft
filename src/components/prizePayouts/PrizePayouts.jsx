@@ -23,24 +23,64 @@ const Drafts = () => {
           display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
         >
           {/* buttons */}
-          <Stack spacing={'4'} w={{ base: '100%', lg: '50%' }} px={10}>
-            <Button className="button-border" _hover={{}} variant={'link'}>
-              <Heading color={'white'} fontSize={'md'} fontWeight="500">
+          <Stack
+            mb="6 !important"
+            spacing={'4'}
+            w={{ base: '100%', lg: '50%' }}
+            px={10}
+          >
+            <Button
+            onClick={()=>nav('/')}
+              className="button-border"
+              color={'white'}
+              _hover={{
+                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                color: '#1A202C',
+              }}
+              variant={'link'}
+            >
+              <Heading fontSize={'md'} fontWeight="500">
                 Home
               </Heading>
             </Button>
-            <Button className="button-border" _hover={{}} variant={'link'}>
-              <Heading color={'white'} fontSize={'md'} fontWeight="500">
+            <Button
+            onClick={()=>nav('/drafts')}
+              className="button-border"
+              color={'white'}
+              _hover={{
+                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                color: '#1A202C',
+              }}
+              variant={'link'}
+            >
+              <Heading fontSize={'md'} fontWeight="500">
                 My Lineup
               </Heading>
             </Button>
-            <Button className="button-border" _hover={{}} variant={'link'}>
-              <Heading color={'white'} fontSize={'md'} fontWeight="500">
+            <Button
+            onClick={()=>nav('/leaderboard')}
+              className="button-border"
+              color={'white'}
+              _hover={{
+                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                color: '#1A202C',
+              }}
+              variant={'link'}
+            >
+              <Heading fontSize={'md'} fontWeight="500">
                 Leaderboard
               </Heading>
             </Button>
-            <Button className="button-border" _hover={{}} variant={'link'}>
-              <Heading color={'white'} fontSize={'md'} fontWeight="500">
+            <Button
+              className="button-border"
+              color={'white'}
+              _hover={{
+                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                color: '#1A202C',
+              }}
+              variant={'link'}
+            >
+              <Heading fontSize={'md'} fontWeight="500">
                 Game Schedule
               </Heading>
             </Button>
@@ -59,14 +99,14 @@ const Drafts = () => {
           </Stack>
         </Stack>
         {/* lineup */}
-        <Stack w={{ base: '100%', md: '60%' }} py={'8'}>
+        <Stack w={{ base: '100%', md: '60%' }} py={{ base: '4', md: '8' }}>
           {/* edit lineup */}
           <Stack spacing={'4'}>
             <Heading
               py={2}
               alignItems={'center'}
               minW={'fit-content'}
-              fontSize={{ base: 'xl', md: '6xl' }}
+              fontSize={{ base: 'xl', md: '3xl' }}
               className="gradient-color"
             >
               Prize Payouts
@@ -272,6 +312,7 @@ const Drafts = () => {
                 mt={5}
               >
                 <Button
+                onClick={()=>nav('/')}
                   _hover={{}}
                   height={'45px'}
                   bg={'linear-gradient(90deg, #FCFF00 0%, #3FFF13 100%)'}
