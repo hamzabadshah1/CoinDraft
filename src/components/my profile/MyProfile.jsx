@@ -150,7 +150,7 @@ const MyProfile = () => {
             {/* change team */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
@@ -173,7 +173,7 @@ const MyProfile = () => {
             {/* change username */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
@@ -200,7 +200,7 @@ const MyProfile = () => {
             {/* change email */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
@@ -227,7 +227,7 @@ const MyProfile = () => {
             {/* Change YFIC Address */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
@@ -254,7 +254,7 @@ const MyProfile = () => {
             {/* Change Password */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
@@ -282,7 +282,7 @@ const MyProfile = () => {
             {/* Change Avatar */}
             <Stack spacing={{ base: '2', md: '4', lg: '6' }} direction={'row'}>
               <Button
-                minW={{ base: '43%' }}
+                minW={{ base: '43%',lg:'30%' }}
                 rounded={'lg'}
                 _hover={{}}
                 bg={' linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
