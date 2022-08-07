@@ -47,5 +47,11 @@
   -webkit-text-fill-color: transparent !important;
 }
 
+/* faq test */
+.faq-text {
+  background: linear-gradient(90deg, #FCFF00 0%, #3FFF13 97.18%) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 
 

@@ -352,6 +352,7 @@ const Drafts = () => {
       </Stack>
       {/* home button */}
       <Button
+      _hover={{}}
         onClick={() => nav('/')}
         display={{ base: 'inherit', md: 'none' }}
         size={'sm'}

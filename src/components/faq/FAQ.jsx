@@ -15,15 +15,21 @@ import {
 import React from 'react';
 import plus from '../../assets/images/plus.png';
 import minus from '../../assets/images/minus.png';
+import { useNavigate } from 'react-router';
 const Learn = () => {
+  const nav = useNavigate()
   return (
-    <Stack position={'relative'} minH={'100vh'} bg={'#050826'} w={'100%'}>
+    <Stack  bg={'#050826'} w={'100%'}>
       {/* body */}
+      <Stack pt={'4'} alignItems={'center'}>
+        <Heading className='faq-text' textAlign={'center'}>
+        Our FAQ’s
+        </Heading>
+      </Stack>
+
       <Stack
-      maxH={'70vh'}
-      overflow='auto'
         px={{ base: '0', sm: '2', md: '8' }}
-        py={{ base: '0', sm: '2', md: '6' }}
+        py='5'
         w={'100%'}
       >
         <Accordion allowMultiple>
@@ -310,11 +316,22 @@ const Learn = () => {
             )}
           </AccordionItem>
         </Accordion>
+         {/* home button */}
+      <Button
+      _hover={{}}
+        onClick={() => nav('/')}
+        size={'md'}
+        mt={'5 !important'}
+        alignSelf={'center'}
+        w={'25%'}
+        bg={'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)'}
+        borderRadius="md"
+      >
+        <Heading fontSize={'lg'}>Home</Heading>
+      </Button>
       </Stack>
       {/* footer */}
       <Stack
-        position={'absolute'}
-        bottom="0"
         px="4"
         mt={'0 !important'}
         py={{ base: '2', md: '5' }}
