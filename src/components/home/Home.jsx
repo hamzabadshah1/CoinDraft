@@ -58,6 +58,7 @@ const Home = () => {
             pb={30}
           >
             <Button
+            onClick={()=>nav('/trending-coins')}
               className="button-border"
               color={'white'}
               _hover={{
