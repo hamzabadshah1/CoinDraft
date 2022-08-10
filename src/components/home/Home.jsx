@@ -11,9 +11,10 @@ import React from 'react';
 import logo from '../../assets/images/logo.png';
 import BgImg from '../../assets/images/BgImg.png';
 import '../../App.css';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import WalletConnect from '../walletConnect/WalletConnect';
 const Home = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   return (
     <Stack w={'full'}>
       <Stack
@@ -24,7 +25,7 @@ const Home = () => {
         bgSize={'cover'}
         bgPosition={'center'}
       >
-        <Stack p={{ base: 4, md: 7 }}>
+        <Stack p={{ base: 4, md: 7 }} justifyContent='space-between' direction={'row'}>
           <Heading
             _hover={{ cursor: 'pointer' }}
             id="button-text"
@@ -32,6 +33,7 @@ const Home = () => {
           >
             CoinDraft
           </Heading>
+          <WalletConnect />
         </Stack>
         <Stack justifyContent="center" alignItems={'center'}>
           <Stack textAlign={'center'} alignItems="center" mt={'-50px'}>
@@ -58,7 +60,7 @@ const Home = () => {
             pb={30}
           >
             <Button
-            onClick={()=>nav('/trending-coins')}
+              onClick={() => nav('/trending-coins')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -74,6 +76,7 @@ const Home = () => {
               </Heading>
             </Button>
             <Button
+              onClick={() => nav('/menu')}
               w={{ base: '100%', md: '20%' }}
               className="button-border"
               color={'white'}
@@ -96,7 +99,7 @@ const Home = () => {
                 color: '#1A202C',
               }}
               variant={'link'}
-              onClick={()=>nav('/faq')}
+              onClick={() => nav('/faq')}
             >
               <Heading fontSize={'md'} fontWeight="500">
                 FAQ

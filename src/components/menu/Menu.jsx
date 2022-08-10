@@ -134,6 +134,7 @@ const Menu = () => {
             </Text>
           </Stack>
           <Stack
+          onClick={()=>nav('/contest')}
             _hover={{ cursor: 'pointer', bgColor: '#201c1c78' }}
             w={{ base: '60%', sm: '40%', md: '30%' }}
             minH={'120px'}
@@ -162,6 +163,7 @@ const Menu = () => {
           alignItems="center"
         >
           <Stack
+          onClick={()=>nav('/leaderboard')}
             _hover={{ cursor: 'pointer', bgColor: '#201c1c78' }}
             w={{ base: '60%', sm: '40%', md: '30%' }}
             minH={'120px'}
@@ -203,6 +205,7 @@ const Menu = () => {
             </Text>
           </Stack>
           <Stack
+          onClick={()=>nav('/gameschedule')}
             _hover={{ cursor: 'pointer', bgColor: '#201c1c78' }}
             w={{ base: '60%', sm: '40%', md: '30%' }}
             minH={'120px'}
