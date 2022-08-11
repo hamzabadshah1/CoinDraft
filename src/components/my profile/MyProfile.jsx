@@ -107,6 +107,7 @@ const MyProfile = () => {
               </Heading>
             </Button>
             <Button
+            onClick={() => nav('/gameschedule')}
               className="button-border"
               color={'white'}
               _hover={{

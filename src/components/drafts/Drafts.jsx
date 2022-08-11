@@ -37,7 +37,7 @@ const Drafts = () => {
           {/* buttons */}
           <Stack spacing={'4'} w={{ base: '35%', xl: '25%' }}>
             <Button
-            onClick={()=>nav('/profile')}
+              onClick={() => nav('/profile')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -51,6 +51,7 @@ const Drafts = () => {
               </Heading>
             </Button>
             <Button
+              onClick={() => nav('/leaderboard')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -64,6 +65,7 @@ const Drafts = () => {
               </Heading>
             </Button>
             <Button
+              onClick={() => nav('/prize-payouts')}
               className="button-border"
               color={'white'}
               _hover={{
@@ -352,7 +354,7 @@ const Drafts = () => {
       </Stack>
       {/* home button */}
       <Button
-      _hover={{}}
+        _hover={{}}
         onClick={() => nav('/')}
         display={{ base: 'inherit', md: 'none' }}
         size={'sm'}

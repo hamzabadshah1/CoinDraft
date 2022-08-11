@@ -13,6 +13,7 @@ import TrendingCoins from '../../components/trendingCoins/TrendingCoins'
 import PrizePayouts from '../../components/prizePayouts/PrizePayouts'
 import FAQ from '../../components/faq/FAQ'
 import MyProfile from '../../components/my profile/MyProfile'
+import NftMatchups from '../../components/nftMatchups/NftMatchups'
 
 const MainRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const MainRoutes = () => {
       <Route path='/contest' element={<ContestLobby />} />
       <Route path='/createcontest' element={<CreateContest />} />
       <Route path='/contestcreated' element={<ContestCreated />} />
+      <Route path='/nftmatchups' element={<NftMatchups />} />
     </Routes>
   )
 }
