@@ -1,20 +1,18 @@
 import React from 'react';
 import {
   Button,
-  HStack,
   Img,
-  Link,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
   ModalHeader,
   ModalOverlay,
-  Spacer,
   Stack,
   Text,
   useDisclosure,
   VStack,
+  Heading,
 } from '@chakra-ui/react';
 import meta from '../../assets/images/metamask.svg';
 import coinbase from '../../assets/images/coinbase.svg';
@@ -22,23 +20,22 @@ import walletconnect from '../../assets/images/walletconnect.png';
 import { useNavigate } from 'react-router-dom';
 
 const WalletConnect = () => {
-    async function requestAccount() {
-        console.log('request account');
-        if (window.ethereum) {
-          console.log('account already exists!');
-          try {
-            await window.ethereum.request({
-              method: 'eth_requestAccounts',
-            });
-            // setwalletAddress(account[0])
-          } catch (error) {
-            console.log('error in connceting');
-          }
-        } else {
-          console.log('not exists');
-        }
-    
+  async function requestAccount() {
+    console.log('request account');
+    if (window.ethereum) {
+      console.log('account already exists!');
+      try {
+        await window.ethereum.request({
+          method: 'eth_requestAccounts',
+        });
+        // setwalletAddress(account[0])
+      } catch (error) {
+        console.log('error in connceting');
       }
+    } else {
+      console.log('not exists');
+    }
+  }
   const nav = useNavigate();
   const OverlayOne = () => (
     <ModalOverlay
@@ -53,10 +50,10 @@ const WalletConnect = () => {
     <>
       <Button
         _hover={{}}
-        height={"45px"}
-        bg={"linear-gradient(90deg, #FCFF00 0%, #3FFF13 100%)"}
+        height={'45px'}
+        bg={'linear-gradient(90deg, #FCFF00 0%, #3FFF13 100%)'}
         borderRadius="full"
-        fontWeight={"bold"}
+        fontWeight={'bold'}
         onClick={() => {
           setOverlay(<OverlayOne />);
           onOpen();
@@ -66,7 +63,7 @@ const WalletConnect = () => {
       </Button>
       <Modal isCentered isOpen={isOpen} onClose={onClose} size={'xl'}>
         {overlay}
-        <ModalContent bgColor={'#001529'} textColor={'white'}>
+        <ModalContent bgColor={'#050826'} textColor={'white'}>
           <ModalHeader>Log in or Create an account</ModalHeader>
           <ModalCloseButton
             _focus={{
@@ -78,10 +75,13 @@ const WalletConnect = () => {
               <Button
                 onClick={requestAccount}
                 w={'full'}
-                bgColor={'#205375'}
-                _hover={{ color: '#001529' }}
-                _focus={{ boxShadow: 'none' }}
-                py={5}
+                className="button-border"
+                color={'white'}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
+                variant={'link'}
               >
                 <Stack direction={'row'} align={'center'}>
                   <Text>Connect MetaMask</Text>
@@ -90,11 +90,14 @@ const WalletConnect = () => {
               </Button>
 
               <Button
-                // onClick={connectWithCoinBase}
                 w={'full'}
-                bgColor={'#205375'}
-                _hover={{ color: '#001529' }}
-                _focus={{ boxShadow: 'none' }}
+                className="button-border"
+                color={'white'}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
+                variant={'link'}
               >
                 <Stack direction={'row'} align={'center'}>
                   <Text>Connect Coinbase</Text>
@@ -102,13 +105,17 @@ const WalletConnect = () => {
                 </Stack>
                 {console.log('metamask')}
               </Button>
+             
 
               <Button
-                // onClick={connectWithWalletConnect}
                 w={'full'}
-                bgColor={'#205375'}
-                _hover={{ color: '#001529' }}
-                _focus={{ boxShadow: 'none' }}
+                className="button-border"
+                color={'white'}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
+                variant={'link'}
               >
                 <Stack direction={'row'} align={'center'}>
                   <Text> Connect WalletConnect</Text>
