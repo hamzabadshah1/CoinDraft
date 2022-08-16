@@ -20,22 +20,7 @@ import walletconnect from '../../assets/images/walletconnect.png';
 import { useNavigate } from 'react-router-dom';
 
 const WalletConnect = () => {
-  async function requestAccount() {
-    console.log('request account');
-    if (window.ethereum) {
-      console.log('account already exists!');
-      try {
-        await window.ethereum.request({
-          method: 'eth_requestAccounts',
-        });
-        // setwalletAddress(account[0])
-      } catch (error) {
-        console.log('error in connceting');
-      }
-    } else {
-      console.log('not exists');
-    }
-  }
+ 
   const nav = useNavigate();
   const OverlayOne = () => (
     <ModalOverlay
@@ -73,7 +58,7 @@ const WalletConnect = () => {
           <ModalBody>
             <VStack align={'center'} justify={'center'}>
               <Button
-                onClick={requestAccount}
+                // onClick={requestAccount}
                 w={'full'}
                 className="button-border"
                 color={'white'}

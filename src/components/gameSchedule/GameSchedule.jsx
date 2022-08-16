@@ -1,8 +1,6 @@
 import {
   Button,
-  Center,
   Heading,
-  HStack,
   Image,
   Stack,
   Tag,
@@ -14,7 +12,7 @@ import '../../App.css';
 import logo from '../../assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
 const GameSchedule = () => {
-    const nav = useNavigate()
+  const nav = useNavigate();
   return (
     <>
       <Stack
@@ -41,7 +39,7 @@ const GameSchedule = () => {
             Game Schedule
           </Heading>
           <Image
-          onClick={()=>nav('/')}
+            onClick={() => nav('/')}
             display={{ base: 'inherit', md: 'none' }}
             _hover={{ cursor: 'pointer' }}
             w={{ base: '14', sm: '20', md: '28', lg: '40' }}
@@ -58,13 +56,13 @@ const GameSchedule = () => {
           >
             <Stack spacing={'3'}>
               <Button
-              onClick={()=>nav('/')}
+                onClick={() => nav('/')}
                 w={'36'}
                 color={'white'}
-              _hover={{
-                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
-                color: '#1A202C',
-              }}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
                 className="button-border"
                 variant={'link'}
               >
@@ -73,13 +71,13 @@ const GameSchedule = () => {
                 </Heading>
               </Button>
               <Button
-              onClick={()=>nav('/drafts')}
+                onClick={() => nav('/drafts')}
                 w={'36'}
                 color={'white'}
-              _hover={{
-                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
-                color: '#1A202C',
-              }}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
                 className="button-border"
                 variant={'link'}
               >
@@ -88,13 +86,13 @@ const GameSchedule = () => {
                 </Heading>
               </Button>
               <Button
-              onClick={()=>nav('/leaderboard')}
+                onClick={() => nav('/leaderboard')}
                 w={'36'}
                 color={'white'}
-              _hover={{
-                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
-                color: '#1A202C',
-              }}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
                 className="button-border"
                 variant={'link'}
               >
@@ -103,13 +101,13 @@ const GameSchedule = () => {
                 </Heading>
               </Button>
               <Button
-              onClick={()=>nav('/prize-payouts')}
+                onClick={() => nav('/prize-payouts')}
                 w={'36'}
                 color={'white'}
-              _hover={{
-                bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
-                color: '#1A202C',
-              }}
+                _hover={{
+                  bg: 'linear-gradient(180deg, #FCFF00 0%, #3FFF13 100%)',
+                  color: '#1A202C',
+                }}
                 className="button-border"
                 variant={'link'}
               >
@@ -120,7 +118,7 @@ const GameSchedule = () => {
             </Stack>
             <VStack>
               <Image
-              onClick={()=>nav('/')}
+                onClick={() => nav('/')}
                 _hover={{ cursor: 'pointer' }}
                 w={{ base: '14', sm: '32', md: '32', lg: '24' }}
                 src={logo}
@@ -164,7 +162,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -174,7 +172,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -203,7 +201,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -213,7 +211,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -242,7 +240,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -252,7 +250,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -281,7 +279,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -291,7 +289,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -320,7 +318,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -330,7 +328,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -359,7 +357,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -369,7 +367,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -398,7 +396,7 @@ const GameSchedule = () => {
               >
                 <Tag
                   fontWeight={'bold'}
-                  fontSize={'xs'}
+                  fontSize={{ base: 'sm', md: 'md' }}
                   bgGradient="linear(180deg, #FCFF00 40%, #3FFF13 100%)"
                   bgClip="text"
                   minH={'0.6em'}
@@ -408,7 +406,7 @@ const GameSchedule = () => {
               </Stack>
               <Text
                 textAlign={'center'}
-                fontSize={{ base: 'xs', md: 'sm' }}
+                fontSize={{ base: 'sm', md: 'md' }}
                 pt={'2'}
               >
                 Saturday - 12:00 pm UTC Each Week Scoring Will Stop Being
@@ -426,7 +424,7 @@ const GameSchedule = () => {
         </Stack>
         {/* Home Mibile Screen Button */}
         <Button
-        onClick={()=>nav('/')}
+          onClick={() => nav('/')}
           w={'40vw'}
           display={{ base: 'inherit', md: 'none' }}
           bgGradient="linear(180deg, #FCFF00 10%, #3FFF13 100%)"
