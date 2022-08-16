@@ -211,7 +211,6 @@ const NftMatchups = () => {
           <Stack
             direction={{ base: 'column', md: 'row' }}
             alignItems={'center'}
-            onClick={onOpen}
           >
             <Stack w={{ base: '100%', md: '80%', lg: '80%', xl: '85%' }}>
               <HStack>
@@ -220,7 +219,7 @@ const NftMatchups = () => {
                   MUTANT APE YACHT CLUB VS LAZY LION
                 </Text>
               </HStack>
-              <Stack direction={{ base: 'column', md: 'row' }}>
+              <Stack direction={{ base: 'column', md: 'row' }} onClick={onOpen}>
                 <Button
                   color={'white'}
                   bgColor={'#050826'}
@@ -283,7 +282,6 @@ const NftMatchups = () => {
           <Stack
             direction={{ base: 'column', md: 'row' }}
             alignItems={'center'}
-            onClick={onOpen}
           >
             <Stack w={{ base: '100%', md: '80%', lg: '80%', xl: '85%' }}>
               <HStack>
@@ -292,7 +290,7 @@ const NftMatchups = () => {
                   AZUKI VS MOONBIRDS
                 </Text>
               </HStack>
-              <Stack direction={{ base: 'column', md: 'row' }}>
+              <Stack direction={{ base: 'column', md: 'row' }} onClick={onOpen}>
                 <Button
                   color={'white'}
                   bgColor={'#050826'}
